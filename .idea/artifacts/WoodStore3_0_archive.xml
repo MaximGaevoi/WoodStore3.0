@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="WoodStore3.0 archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/WoodStore3_0_archive</output-path>
+    <root id="archive" name="WoodStore3.0 archive.war">
+      <element id="artifact" artifact-name="WoodStore" />
+    </root>
+  </artifact>
+</component>

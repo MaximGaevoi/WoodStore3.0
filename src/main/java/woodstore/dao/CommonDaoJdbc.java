@@ -12,13 +12,13 @@ import java.util.Set;
  * @author Ihor Savchenko
  */
 public class CommonDaoJdbc extends AbstractDaoJdbc implements CommonDao {
-    private static final String SELECT_ALL_ADMINS = "SELECT * FROM training_web_application.admins";
-    private static final String SELECT_ALL_USERS = "SELECT * FROM training_web_application.users";
-    private static final String SELECT_ADMIN = "SELECT * FROM training_web_application.admins AS AD WHERE AD.login = ? AND AD.password = ?";
-    private static final String SELECT_USER = "SELECT * FROM training_web_application.users AS US WHERE US.login = ? AND US.password = ?";
-    private static final String ADD_USER = "INSERT INTO training_web_application.users(login, password, name, lastname, email, access) VALUES(?, ?, ?, ?, ?, ?)";
-    private static final String UPDATE_USER_ACCESS="UPDATE training_web_application.users AS US SET US.access=? WHERE US.id=?";
-    private static final String DELETE_USER_BY_ID="DELETE FROM training_web_application.users AS US WHERE US.id=?";
+    private static final String SELECT_ALL_ADMINS = "SELECT * FROM WOODSTORE.admins";
+    private static final String SELECT_ALL_USERS = "SELECT * FROM WOODSTORE.users";
+    private static final String SELECT_ADMIN = "SELECT * FROM WOODSTORE.admins AS AD WHERE AD.login = ? AND AD.password = ?";
+    private static final String SELECT_USER = "SELECT * FROM WOODSTORE.users AS US WHERE US.login = ? AND US.password = ?";
+    private static final String ADD_USER = "INSERT INTO WOODSTORE.users(login, password, name, lastname, email, access) VALUES(?, ?, ?, ?, ?, ?)";
+    private static final String UPDATE_USER_ACCESS="UPDATE WOODSTORE.users AS US SET US.access=? WHERE US.id=?";
+    private static final String DELETE_USER_BY_ID="DELETE FROM WOODSTORE.users AS US WHERE US.id=?";
 
     public Set<Admin> selectAllAdmins() throws DBSystemException, SQLException {
         Connection conn = getSerializableConnection();
